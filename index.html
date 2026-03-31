@@ -3,127 +3,374 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>éBizu · Marketing Digital </title>
-  <!-- Font Awesome 6 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- AOS Animation Library -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <!-- Seu CSS externo -->
+  <title>éBizu · Marketing Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="header">
-    <div class="container">
-      <div class="logo">
-        <img class="logo-img" src="https://media.discordapp.net/attachments/849700194207400007/1486782740991967323/image.png?ex=69c6c1d4&is=69c57054&hm=95ee8e223883817ae235dba812905fa648bc0c6747ee42b663a72afa1499b3f2&=&format=webp&quality=lossless&width=968&height=968" alt="Bizu">
-        <span>éBIZU</span>
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <a href="#" class="logo">
+      <div class="logo-badge">
+        <img src="ébizulogo.jpg" alt="éBizu" onerror="this.style.display='none'">
       </div>
-      <nav class="nav-links">
-        <a href="#">Início</a>
-        <a href="#">Serviços</a>
-        <a href="#">Cases</a>
-        <a href="#">Contato</a>
-        <a href="#" class="btn-amarelo"><i class="fas fa-rocket"></i> Quero crescer</a>
-      </nav>
-    </div>
-  </header>
+      <div class="logo-wm">
+        <span class="logo-name"><em>é</em>Bizu</span>
+        <span class="logo-tagline">marketing digital</span>
+      </div>
+    </a>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#contato" class="btn btn-yellow">Falar agora →</a>
+    </nav>
+  </div>
+</header>
 
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content" data-aos="fade-up">
-        <span class="tag"><i class="fas fa-bolt"></i> Estratégia 2026</span>
-        <h1>Sua marca mais <span>forte</span> onde as pessoas estão</h1>
-        <p class="hero-desc">Nós cuidamos das suas redes sociais, identidade e propaganda com tecnologia e criatividade.</p>
-        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-          <a href="#" class="btn-amarelo"><i class="fab fa-whatsapp"></i> Chamar no zap</a>
-          <a href="#" class="btn-outline-amarelo"><i class="fas fa-clipboard-check"></i> Diagnóstico grátis</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div><div class="hero-glow2"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow sr"><span class="tag">⚡ Marketing Digital · 2025</span></div>
+        <h1 class="sr d1">Sua marca onde<br>os clientes <span class="hlbox">já estão</span></h1>
+        <p class="hero-sub sr d2">Criatividade que posiciona. Estratégia que conecta. Conteúdo que entrega. Transformamos ideias em presença digital real.</p>
+        <div class="hero-actions sr d3">
+          <a href="#contato" class="btn btn-yellow">Quero crescer agora →</a>
+          <a href="#como-funciona" class="btn btn-ghost">Como funciona</a>
         </div>
-        <div class="hero-stats">
-          <div class="stat-item"><h3>+150</h3><span>empresas ativas</span></div>
-          <div class="stat-item"><h3>24/7</h3><span>gestão de redes</span></div>
+        <div class="hero-proof sr d4">
+          <div class="proof-avs">
+            <span>RI</span><span>LB</span><span>VY</span><span>IP</span>
+            <span style="background:var(--yellow);color:var(--black-deep);">+</span>
+          </div>
+          <p class="proof-txt"><strong>+15 marcas</strong> atendidas pela éBizu</p>
         </div>
       </div>
-      <div class="hero-image" data-aos="fade-left">
-        <i class="fas fa-chart-line"></i>
+      <div class="hero-visual sr d2">
+        <div class="hv-card hv-main">
+          <div class="hv-lbl">Engajamento mensal</div>
+          <div class="hv-row">
+            <div class="hv-val">+340%</div>
+            <span class="hv-badge">↑ Crescimento real</span>
+          </div>
+          <div class="hv-chart" id="heroChart"></div>
+        </div>
+        <div class="hv-card hv-float hv-f1">
+          <div class="hv-fi">📅</div><div class="hv-fl">Calendário</div><div class="hv-fv">Organizado</div>
+        </div>
+        <div class="hv-card hv-float hv-f2">
+          <div class="hv-fi">🎯</div><div class="hv-fl">Estratégia</div><div class="hv-fv">Data-driven</div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="servicos">
-    <div class="container">
-      <h2 data-aos="fade-up"><i class="fas fa-crown"></i> Nós fazemos sua marca decolar</h2>
-      <div class="cards">
-        <div class="card" data-aos="zoom-in" data-aos-delay="100"><i class="fab fa-instagram"></i><h3>Social Media</h3><p>Gestão completa: conteúdo que engaja e vende de verdade.</p><a href="#" class="saiba">+ detalhes →</a></div>
-        <div class="card" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-chart-line"></i><h3>Tráfego Pago</h3><p>Anúncios otimizados com ROI mensurável.</p><a href="#" class="saiba">+ detalhes →</a></div>
-        <div class="card" data-aos="zoom-in" data-aos-delay="300"><i class="fas fa-palette"></i><h3>Criativos</h3><p>Design, vídeo e copy que param o scroll.</p><a href="#" class="saiba">+ detalhes →</a></div>
-        <div class="card" data-aos="zoom-in" data-aos-delay="400"><i class="fas fa-chart-simple"></i><h3>Relatórios</h3><p>Transparência total com dados em tempo real.</p><a href="#" class="saiba">+ detalhes →</a></div>
+<!-- LOGOS -->
+<div class="logos-strip">
+  <div class="container">
+    <p class="logos-lbl">Marcas que já escolheram a éBizu</p>
+    <div class="logos-row">
+      <span>Rangel Imóveis</span><span>Low Back</span><span>VYK Engenharia</span>
+      <span>Instituto Paulinho</span><span>SUAncestral</span><span>Engetec</span><span>Da Cor ao Caso</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="servicos">
+  <div class="container">
+    <div class="section-header sr">
+      <span class="tag">Nossos serviços</span>
+      <h2>Tudo que sua marca precisa<br>para <span class="hl">crescer de verdade</span></h2>
+      <p>Cada post com propósito — nada feito ao acaso. Mais simples, mais humano e mais estratégico.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card sr d1">
+        <div class="svc-icon">📱</div>
+        <h3>Gestão de Redes Sociais</h3>
+        <p>Cuidamos de tudo para você ter presença digital sem preocupação. Planejamento estratégico, calendário editorial e publicação com antecedência e organização.</p>
+        <span class="svc-stat">⚡ Presença digital sem estresse</span>
+      </div>
+      <div class="svc-card sr d2">
+        <div class="svc-icon">🎨</div>
+        <h3>Design Digital</h3>
+        <p>Artes modernas, alinhadas à identidade da sua marca. Nada de posts genéricos ou fórmulas prontas — criatividade que diferencia e para o scroll.</p>
+        <span class="svc-stat">⚡ Identidade única para sua marca</span>
+      </div>
+      <div class="svc-card sr d3">
+        <div class="svc-icon">💬</div>
+        <h3>Gerenciamento de Direct e Comentários</h3>
+        <p>Atendimento humanizado que retém seguidores. Interações reais para fortalecer sua comunidade e transformar seguidores em clientes fiéis.</p>
+        <span class="svc-stat">⚡ Relacionamento real com seu público</span>
+      </div>
+      <div class="svc-card sr d4">
+        <div class="svc-icon">📊</div>
+        <h3>Gestão de Métricas</h3>
+        <p>Acompanhamento de crescimento e performance com relatórios simples, diretos e focados no que importa. Você sempre sabe onde está cada resultado.</p>
+        <span class="svc-stat">⚡ Resultados que você acompanha</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="redes-showcase">
-    <div class="container">
-      <div class="redes-info" data-aos="fade-right">
-        <h2>Cuidamos das <span>suas redes</span> com inteligência</h2>
-        <ul><li><i class="fas fa-check-circle"></i> Estratégia data-driven</li><li><i class="fas fa-check-circle"></i> Conteúdo viral</li><li><i class="fas fa-check-circle"></i> Engajamento real</li></ul>
-        <a href="https://www.instagram.com/ebizumktdigital/" class="btn-amarelo"><i class="fab fa-instagram"></i> Quero gestão de redes</a>
+<!-- HOW IT WORKS -->
+<section class="how" id="como-funciona">
+  <div class="container">
+    <div class="section-header sr">
+      <span class="tag">Nosso processo</span>
+      <h2>Mais simples, mais humano<br>e mais <span class="hl">estratégico</span></h2>
+      <p>A gente sabe o que um cliente espera de um social media — e nosso processo reflete isso.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-line"></div>
+      <div class="how-step sr d1">
+        <div class="how-num">01</div>
+        <h3>Entendemos sua marca</h3>
+        <p>Visitas presenciais e reuniões para entender de perto sua rotina, necessidades e posicionamento de marca.</p>
       </div>
-      <div class="redes-grid" data-aos="fade-left">
-        <a href="https://www.instagram.com/ebizumktdigital/" class="social-icon"><i class="fab fa-instagram"></i><p>Instagram</p></a>
-        <div class="social-icon"><i class="fab fa-tiktok"></i><p>TikTok</p></div>
-        <div class="social-icon"><i class="fab fa-facebook"></i><p>Facebook</p></div>
-        <div class="social-icon"><i class="fab fa-linkedin"></i><p>LinkedIn</p></div>
+      <div class="how-step sr d2">
+        <div class="how-num">02</div>
+        <h3>Planejamos o conteúdo</h3>
+        <p>Planejamento estratégico com calendário editorial organizado — cada post com propósito, nada feito ao acaso.</p>
+      </div>
+      <div class="how-step sr d3">
+        <div class="how-num">03</div>
+        <h3>Criamos e publicamos</h3>
+        <p>Design digital, copy e gestão completa das redes. Tudo entregue com antecedência e alinhado à sua identidade.</p>
+      </div>
+      <div class="how-step sr d4">
+        <div class="how-num">04</div>
+        <h3>Acompanhamos os resultados</h3>
+        <p>Gestão de métricas com relatórios simples e diretos. Você acompanha crescimento e performance em tempo real.</p>
       </div>
     </div>
-  </section>
+    <div class="how-cta sr">
+      <a href="#contato" class="btn btn-yellow">Quero conversar sobre meu projeto →</a>
+    </div>
+  </div>
+</section>
 
+<!-- CLIENTS CAROUSEL -->
+<section class="cases" id="clientes">
+  <div class="container">
+    <div class="section-header sr">
+      <span class="tag">Nossos clientes</span>
+      <h2>Marcas que <span class="hl">confiam na éBizu</span></h2>
+      <p>Conectamos marcas com as pessoas certas, do jeito certo — em todos os segmentos.</p>
+    </div>
+  </div>
+  <div class="cases-wrap">
+    <div class="cases-track" id="casesTrack"></div>
+  </div>
+</section>
 
-  <section class="cases">
-    <div class="container">
-      <h2 data-aos="fade-up"><i class="fas fa-medal"></i> Resultados que inspiram</h2>
-      <div class="case-carousel">
-        <div class="case-item" data-aos="flip-left"><i class="fas fa-chart-line"></i><p>"+340% de engajamento em 60 dias. A éBizu transformou nossa comunicação!"</p><h4>— Moda Monteiro</h4><span class="resultado">📈 +340%</span></div>
-        <div class="case-item" data-aos="flip-left" data-aos-delay="100"><i class="fas fa-tiktok"></i><p>"Viralizamos no TikTok com 2.5M views. Melhor investimento do ano."</p><h4>— Brito Doces</h4><span class="resultado">🎬 2.5M views</span></div>
-        <div class="case-item" data-aos="flip-left" data-aos-delay="200"><i class="fas fa-dollar-sign"></i><p>"ROI de 580% em campanhas de tráfego. Nunca vi resultado tão rápido."</p><h4>— Lowback</h4><span class="resultado">💰 ROI 580%</span></div>
-        <div class="case-item" data-aos="flip-left" data-aos-delay="300"><i class="fas fa-users"></i><p>"Gestão completa de redes, crescemos 200% em seguidores orgânicos."</p><h4>— Carla Monteiro</h4><span class="resultado">⭐ +200% followers</span></div>
+<!-- TEAM -->
+<section class="team" id="equipe">
+  <div class="container">
+    <div class="section-header sr">
+      <span class="tag">Nossa equipe</span>
+      <h2>Três mentes criativas.<br><span class="hl">Um objetivo.</span></h2>
+      <p>Fazer sua marca acontecer. Somos mais simples, mais humanos e mais estratégicos.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card sr d1">
+        <div class="team-avatar">NL</div>
+        <h3>Nathália Lopes</h3>
+      </div>
+      <div class="team-card sr d2">
+        <div class="team-avatar">LL</div>
+        <h3>Lidia Lima</h3>
+      </div>
+      <div class="team-card sr d3">
+        <div class="team-avatar">LU</div>
+        <h3>Luana Lima</h3>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="cta-bizu">
-    <div class="container">
-      <h2 data-aos="zoom-in">Vamos dar um <span style="background: #0000005e; color:#fd0; padding:0 16px;">BIZU</span> na sua presença digital?</h2>
-      <p data-aos="fade-up">Preencha nosso formulário e receba um diagnóstico estratégico gratuito.</p>
-      <a href="#" class="btn-amarelo" data-aos="pulse" style="background:#0a0a0a; color:#fd0 !important;">🔥 QUERO SER CLIENTE BIZU</a>
+<!-- COMMITMENTS -->
+<section class="commitments" id="compromisso">
+  <div class="container">
+    <div class="section-header sr">
+      <span class="tag">Nosso compromisso</span>
+      <h2>O que um cliente espera<br>de um <span class="hl">social media</span></h2>
+      <p>A gente sabe — e nossos valores refletem isso em cada entrega.</p>
     </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-logo">
-  
-        <img class="footer-logo-img" src="" alt="Bizu">
-        <span>éBIZU</span>
-        <p>© 2026 · marketing que conecta</p>
+    <div class="commit-grid">
+      <div class="commit-card sr d1">
+        <div class="commit-icon">🎯</div>
+        <h3>Entrega sem enrolação</h3>
+        <p>Clareza no processo, calendário organizado e previsibilidade. Você sabe o que vai acontecer antes de acontecer.</p>
       </div>
-      <div class="social-links">
-        <a href="https://www.instagram.com/ebizumktdigital/"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
+      <div class="commit-card sr d2">
+        <div class="commit-icon">💡</div>
+        <h3>Estratégia que faz sentido</h3>
+        <p>Planejamento baseado no posicionamento da sua marca — não em tendências genéricas ou fórmulas prontas.</p>
+      </div>
+      <div class="commit-card sr d3">
+        <div class="commit-icon">🎨</div>
+        <h3>Criatividade que diferencia</h3>
+        <p>Nada de posts genéricos. Cada conteúdo é feito especificamente para a sua marca e só para ela.</p>
+      </div>
+      <div class="commit-card sr d1">
+        <div class="commit-icon">📊</div>
+        <h3>Resultados que você acompanha</h3>
+        <p>Relatórios simples, diretos e focados no que importa. Transparência total em cada etapa.</p>
+      </div>
+      <div class="commit-card sr d2">
+        <div class="commit-icon">🤝</div>
+        <h3>Relacionamento real</h3>
+        <p>Interações humanizadas para fortalecer sua comunidade. Seguidor feliz vira cliente, cliente feliz vira fã.</p>
+      </div>
+      <div class="commit-card sr d3">
+        <div class="commit-icon">🏠</div>
+        <h3>Visitas presenciais</h3>
+        <p>Proximidade para entender de perto sua rotina e necessidades. A gente vai até você.</p>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true,
-      offset: 100
-    });
-  </script>
+<!-- CONTACT FORM -->
+<section class="contact-section" id="contato">
+  <div class="contact-bg">#éBizu</div>
+  <div class="container">
+    <div class="contact-inner">
+
+      <div class="contact-left sr">
+        <span class="tag">Vamos conversar?</span>
+        <h2>Fale com a<br><strong>#éBizu</strong></h2>
+        <p>Preencha o formulário ao lado e entraremos em contato em até 24h. Ou nos chame diretamente:</p>
+        <div class="contact-links">
+          <a href="https://wa.me/5521992711159" class="contact-link">
+            <div class="cl-icon">📲</div>
+            <div><div class="cl-label">WhatsApp</div><div class="cl-val">(21) 99271-1159</div></div>
+          </a>
+          <a href="https://wa.me/5521993957278" class="contact-link">
+            <div class="cl-icon">📲</div>
+            <div><div class="cl-label">WhatsApp</div><div class="cl-val">(21) 99395-7278</div></div>
+          </a>
+          <a href="mailto:ebizumarketingdigital@gmail.com" class="contact-link">
+            <div class="cl-icon">✉️</div>
+            <div><div class="cl-label">E-mail</div><div class="cl-val">ebizumarketingdigital@gmail.com</div></div>
+          </a>
+          <a href="https://www.instagram.com/ebizumktdigital/" class="contact-link">
+            <div class="cl-icon">📸</div>
+            <div><div class="cl-label">Instagram</div><div class="cl-val">@ebizumktdigital</div></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap sr d2">
+        <div class="form-header">
+          <span class="form-badge"> Formulario</span>
+          <p>Sem compromisso · Resposta em até 24h</p>
+        </div>
+
+        <div class="form-group">
+          <label>Seu nome *</label>
+          <input type="text" id="f-nome" placeholder="Ex: Maria Silva">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>WhatsApp *</label>
+            <input type="tel" id="f-wpp" placeholder="(21) 99999-9999">
+          </div>
+          <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" id="f-email" placeholder="seu@email.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Nome da empresa / marca *</label>
+          <input type="text" id="f-empresa" placeholder="Ex: Loja da Maria">
+        </div>
+
+        <div class="form-group">
+          <label>Segmento / ramo de atuação *</label>
+          <select id="f-segmento">
+            <option value="">Selecione...</option>
+            <option>Moda & Varejo</option>
+            <option>Alimentação & Gastronomia</option>
+            <option>Saúde & Bem-estar</option>
+            <option>Educação & Cursos</option>
+            <option>Imóveis & Construção</option>
+            <option>Beleza & Estética</option>
+            <option>Serviços Profissionais</option>
+            <option>Tecnologia</option>
+            <option>Marca Pessoal</option>
+            <option>Outro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>O que você precisa?</label>
+          <div class="check-group">
+            <label class="check-item"><input type="checkbox" value="Gestão de Redes Sociais"> Gestão de Redes</label>
+            <label class="check-item"><input type="checkbox" value="Design Digital"> Design Digital</label>
+            <label class="check-item"><input type="checkbox" value="Calendário Editorial"> Calendário Editorial</label>
+            <label class="check-item"><input type="checkbox" value="Direct e Comentários"> Direct & Comentários</label>
+            <label class="check-item"><input type="checkbox" value="Gestão de Métricas"> Gestão de Métricas</label>
+            <label class="check-item"><input type="checkbox" value="Planejamento Estratégico"> Planejamento</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Conte um pouco sobre sua marca</label>
+          <textarea id="f-msg" placeholder="O que sua empresa faz, qual seu público, quais são seus objetivos nas redes sociais..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn-form-wpp" onclick="enviarWhatsApp()">📲 Enviar pelo WhatsApp</button>
+          <button class="btn-form-email" onclick="enviarEmail()">✉️ Enviar por E-mail</button>
+        </div>
+
+        <div id="form-error" class="form-error" style="display:none">⚠️ Preencha os campos obrigatórios: nome, WhatsApp, empresa e segmento.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <a href="#" class="logo">
+          <div class="logo-badge">
+            <img src="ébizulogo.jpg" alt="éBizu" onerror="this.style.display='none'">
+          </div>
+          <div class="logo-wm">
+            <span class="logo-name"><em>é</em>Bizu</span>
+            <span class="logo-tagline">marketing digital</span>
+          </div>
+        </a>
+        <p class="footer-copy">© 2026 éBizu · Marketing que conecta e converte.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/ebizumktdigital/">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="https://wa.me/5521992711159">WhatsApp</a>
+        <a href="mailto:ebizumarketingdigital@gmail.com">E-mail</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Feito com 💛 pela éBizu · Rio de Janeiro, Brasil</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
